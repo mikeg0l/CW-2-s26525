@@ -17,10 +17,7 @@ public class GasContainer : Container, IHazardNotifier
 
     public override void Empty()
     {
-       // W momencie kiedy opróżniamy kontener na gaz - pozostawiamy 5% jego ładunku wewnątrz kontenera. 
-    
-       
-        double remainingGas = CargoList.Sum(c => c.Weight) * 0.05;
+        var remainingGas = CargoList.Sum(c => c.Weight) * 0.05;
         CargoList.Clear();
         CargoList.Add(new Cargo(ProductType.Gas, remainingGas));
     }

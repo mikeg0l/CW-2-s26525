@@ -17,5 +17,6 @@ public enum ProductType
     Juice,
     Water,
     Wine,
-    Beer
+    Beer,
+    Petrol
 }

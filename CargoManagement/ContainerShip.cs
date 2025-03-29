@@ -25,7 +25,7 @@ public class ContainerShip
             throw new OverfillException("Ship is full");
         }
         
-        if (Containers.Sum(c => c.Weight) + container.Weight > MaxWeight)
+        if (Containers.Sum(c => c.Weight) + container.Weight > MaxWeight * 1000)
         {
             throw new OverfillException("Ship is too heavy");
         }
